@@ -17,7 +17,7 @@ func (Assert) StringNotEmpty(value string, message string) error {
   return nil
 }
 
-func (Assert) Int32Gt(value int32, valueToCompare int32, message string) error {
+func (Assert) Float32Gt(value float32, valueToCompare float32, message string) error {
   if value <= valueToCompare {
     return errors.New(message)
   }
@@ -25,7 +25,7 @@ func (Assert) Int32Gt(value int32, valueToCompare int32, message string) error {
   return nil
 }
 
-func (Assert) Float32Gt(value float32, valueToCompare float32, message string) error {
+func (Assert) Float64Gt(value float64, valueToCompare float64, message string) error {
   if value <= valueToCompare {
     return errors.New(message)
   }
@@ -49,7 +49,15 @@ func (Assert) IntGt(value int, valueToCompare int, message string) error {
   return nil
 }
 
-func (Assert) Float64Gt(value float64, valueToCompare float64, message string) error {
+func (Assert) Int32Gt(value int32, valueToCompare int32, message string) error {
+  if value <= valueToCompare {
+    return errors.New(message)
+  }
+
+  return nil
+}
+
+func (Assert) Int64t(value int16, valueToCompare int16, message string) error {
   if value <= valueToCompare {
     return errors.New(message)
   }
