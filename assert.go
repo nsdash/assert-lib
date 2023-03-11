@@ -32,3 +32,27 @@ func (Assert) Float32Gt(value float32, valueToCompare float32, message string) e
 
   return nil
 }
+
+func (Assert) UintGt(value uint, valueToCompare uint, message string) error {
+  if value <= valueToCompare {
+    return errors.New(message)
+  }
+
+  return nil
+}
+
+func (Assert) IntGt(value int, valueToCompare int, message string) error {
+  if value <= valueToCompare {
+    return errors.New(message)
+  }
+
+  return nil
+}
+
+func (Assert) Float64Gt(value float64, valueToCompare float64, message string) error {
+  if value <= valueToCompare {
+    return errors.New(message)
+  }
+
+  return nil
+}
